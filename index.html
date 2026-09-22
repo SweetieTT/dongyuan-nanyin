@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#1f241f" />
+  <title>听见东园｜东园南音数字记忆</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header dark-ui" id="siteHeader">
+    <button class="wordmark" data-go="home" aria-label="回到首页"><span>东园</span><small>DONGYUAN · NANYIN</small></button>
+    <nav aria-label="主导航">
+      <button data-go="archive">MEMORY ARCHIVE</button>
+      <button data-go="studio">AI STUDIO</button>
+      <button data-go="community">COMMUNITY</button>
+      <button data-go="memory">MY MEMORY <i id="memoryCount">00</i></button>
+    </nav>
+    <div class="header-tools">
+      <button class="language-toggle" id="languageToggle" aria-label="Switch to English"><span class="active">中</span><i></i><span>EN</span></button>
+      <button class="sound-toggle" id="soundToggle" aria-pressed="false"><span class="sound-bars"><i></i><i></i><i></i></span><b>SOUND OFF</b></button>
+    </div>
+    <button class="menu-button" id="menuButton" aria-label="打开导航">目录</button>
+  </header>
+
+  <main>
+    <section class="view active hero" id="home" data-view="home">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-wash" aria-hidden="true"></div>
+      <div class="score-veil" aria-hidden="true">工 五 六 工 尺 上 一 四 乂 工 六<br>尺 工 一 五 乂 六 四 工 尺 上</div>
+      <div class="hero-copy reveal-group">
+        <p class="archive-mark">东园南音数字记忆档案 <span>DY · 2026</span></p>
+        <h1>听见<br><em>东园</em></h1>
+        <p class="hero-en">Walk into a place.<br>Listen to its memories.</p>
+        <button class="enter-button" data-go="archive"><span>进入记忆</span><i>↘</i></button>
+      </div>
+      <div class="hero-side-note">
+        <span>24°35′N</span><span>118°14′E</span>
+        <p>一处地方从来不只属于此刻。<br>声音仍在旧墙与水渠之间回响。</p>
+      </div>
+      <div class="scroll-cue">SCROLL TO REMEMBER <span></span></div>
+    </section>
+
+    <section class="view archive-view" id="archive" data-view="archive">
+      <div class="archive-head">
+        <div><span class="index-no">01</span><h2>东园记忆地图</h2><p>从空间进入记忆。选择一处地点，听见它未曾消失的声响。</p></div>
+        <div class="archive-status"><span>ARCHIVE STATUS</span><b>12 / 37</b><small>MEMORIES VISIBLE</small></div>
+      </div>
+      <div class="map-shell">
+        <svg class="map-drawing" viewBox="0 0 1200 680" role="img" aria-label="东园社区记忆地图">
+          <defs><filter id="rough"><feTurbulence baseFrequency=".018" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2"/></filter></defs>
+          <path class="canal" d="M-30 545 C150 470 245 590 405 500 S670 410 790 475 1010 565 1240 395"/>
+          <g class="map-roads" filter="url(#rough)"><path d="M85 120L344 226 625 105 1110 220"/><path d="M180 630L348 225 665 380 1040 610"/><path d="M620 105L665 380 940 300"/><path d="M430 645L665 380 1110 220"/><path d="M85 120L180 630"/></g>
+          <g class="map-blocks"><path d="M117 170l150 62-65 120-125-56z"/><path d="M386 245l164-85 56 156-144 50z"/><path d="M736 132l220 65-52 92-177-31z"/><path d="M763 395l180-42 71 137-198 36z"/><path d="M277 421l129-45 66 113-157 51z"/></g>
+          <g class="place-node" data-scene="academy" tabindex="0"><circle cx="410" cy="307" r="35"/><circle cx="410" cy="307" r="7"/><text x="410" y="371">东园书院</text><text x="410" y="390">ACADEMY · 01</text></g>
+          <g class="place-node" data-scene="hall" tabindex="0"><rect x="760" y="215" width="62" height="62"/><rect x="786" y="241" width="10" height="10"/><text x="792" y="305">东方红大礼堂</text><text x="792" y="324">ASSEMBLY HALL · 02</text></g>
+          <g class="place-node" data-scene="temple" tabindex="0"><path d="M649 408l35 35-35 35-35-35z"/><circle cx="649" cy="443" r="6"/><text x="649" y="505">池王爷宫</text><text x="649" y="524">TEMPLE · 03</text></g>
+          <g class="place-node" data-scene="canal" tabindex="0"><circle cx="255" cy="530" r="35"/><path d="M237 530h36M255 512v36"/><text x="255" y="590">东园水渠</text><text x="255" y="609">CANAL · 04</text></g>
+          <g class="place-node locked" tabindex="0"><circle cx="985" cy="445" r="22"/><text x="985" y="489">防空洞</text><text x="985" y="508">COMING SOON</text></g>
+          <text class="map-water-label" x="60" y="570">WATER REMEMBERS / 水有记忆</text>
+        </svg>
+        <div class="map-legend"><span><i class="round"></i>文化空间</span><span><i class="diamond"></i>仪式空间</span><span><i class="square"></i>公共空间</span></div>
+        <aside class="map-note"><b>场所不是背景</b><p>它保存动作、声音与相遇。点击一处坐标，让一条隐匿的记忆重新显影。</p></aside>
+      </div>
+    </section>
+
+    <section class="view scene-view" id="scene" data-view="scene">
+      <div class="scene-image" id="sceneImage"></div>
+      <div class="scene-tint"></div>
+      <div class="scene-top">
+        <button class="back-button" data-go="archive">← 返回地图</button>
+        <div><span id="sceneId">DY-PLACE-001</span><b id="scenePeriod">TODAY</b></div>
+      </div>
+      <div class="scene-title"><span>PLACE 01</span><h2 id="sceneTitle">东园书院</h2><p id="sceneSubtitle">旧墙之内，日常排练让古老声腔继续发生。</p></div>
+      <div id="hotspots" class="hotspots"></div>
+      <aside class="memory-card" id="memoryCard" aria-live="polite">
+        <button class="card-close" id="cardClose" aria-label="关闭">×</button>
+        <span class="card-index" id="cardIndex">DY-OBJ-001</span>
+        <div class="card-meta"><i id="cardSymbol">○</i><span id="cardType">OBJECT</span><span id="cardYear">清末至今</span></div>
+        <h3 id="cardTitle">南音琵琶</h3>
+        <div class="card-image" id="cardImage"><span>器物影像 / 待补充</span></div>
+        <p id="cardDescription"></p>
+        <blockquote id="cardQuote"></blockquote>
+        <button class="audio-row" id="cardAudio"><span class="play-icon">▶</span><b>听见这段记忆</b><i class="mini-wave">▂▄▆▃▅▇▂▄▆</i><small>00:18</small></button>
+        <div class="related"><span>RELATED MEMORY</span><div id="relatedLinks"></div></div>
+        <button class="thread-add" id="threadAdd">＋ 串入我的记忆线</button>
+      </aside>
+      <div class="time-layer">
+        <div class="time-copy"><span>TIME LAYER</span><b>Same place. Different memories.</b></div>
+        <div class="time-options" id="timeOptions"><button data-time="1950s">1950s</button><button data-time="1980s">1980s</button><button data-time="2000s">2000s</button><button class="active" data-time="TODAY">TODAY</button><span class="track"><i></i></span></div>
+      </div>
+      <div class="thread-dock"><span>YOUR MEMORY THREAD</span><div id="threadMini"><i></i><small>从一个记忆开始</small></div><button data-go="memory">展开 ↗</button></div>
+    </section>
+
+    <section class="view studio-view" id="studio" data-view="studio">
+      <div class="studio-intro"><span class="index-no">02</span><h2>把一段记忆<br>变成<em>南音</em></h2><p>写下一句话。系统会从记忆的地点、情绪与时间中，选择一段南音式旋律回应你。</p></div>
+      <div class="studio-workbench">
+        <label for="memoryInput">你的记忆 / YOUR MEMORY</label>
+        <textarea id="memoryInput" maxlength="80" placeholder="小时候，我常跟奶奶经过东园的水渠……"></textarea>
+        <div class="prompt-meta"><span id="charCount">0 / 80</span><button id="examplePrompt">使用一段示例</button></div>
+        <button class="generate-button" id="generateButton"><span>生成一段记忆</span><i>GENERATE A MEMORY ↗</i></button>
+        <div class="generation" id="generation">
+          <div class="generation-head"><span>DY-AI-<b id="genId">000</b></span><small>GENERATED FROM MEMORY</small></div>
+          <div class="score" id="score"><i>工</i><i>乂</i><i>六</i><i>四</i><i>一</i><i>工</i><i>尺</i><i>上</i></div>
+          <canvas id="waveform" width="800" height="120"></canvas>
+          <div class="player"><button id="playGenerated">▶</button><div><b id="generatedTitle">水渠旁的旧日回声</b><span id="generatedTags">水 · 怀旧 · 缓板</span></div><time id="playTime">00:00 / 00:18</time></div>
+          <div class="generation-actions"><button id="saveGenerated">SAVE TO MY MEMORY</button><button id="shareGenerated">SHARE TO COMMUNITY</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view community-view" id="community" data-view="community">
+      <div class="community-head"><span class="index-no">03</span><h2>一面仍在生长的<br>记忆墙</h2><p>个人讲述被听见，也可能成为下一条集体档案。</p></div>
+      <div class="filters" id="filters"><button class="active">ALL</button><button>MEMORY</button><button>NANYIN</button><button>PLACE</button><button>AI CREATION</button></div>
+      <div class="memory-wall" id="memoryWall">
+        <article class="wall-card tall" data-type="MEMORY"><div class="paper-photo photo-one"><span>东园旧影 · 1987</span></div><small>MEMORY · 12 AUG 2026</small><h3>礼堂散场以后</h3><p>小时候只记得大人们搬着长凳。很多年以后再听到拍板，才知道那晚唱的是南音。</p><footer><span>林阿姨 · 东园居民</span><button>♡ 24</button></footer></article>
+        <article class="wall-card quote-card" data-type="NANYIN"><div class="quote-mark">“</div><blockquote>声一起，村子就不只是一个地方。它会变成许多人共同记得的样子。</blockquote><small>NANYIN · ORAL HISTORY 04</small><footer><span>复兴社成员</span><button>♡ 41</button></footer></article>
+        <article class="wall-card" data-type="PLACE"><div class="paper-photo photo-two"><span>东园水渠 · 今日</span></div><small>PLACE · 04 SEP 2026</small><h3>水渠边的路</h3><p>奶奶总在这里放慢脚步。</p><footer><span>鹭岛小陈</span><button>♡ 17</button></footer></article>
+        <article class="wall-card audio-card" data-type="AI CREATION"><small>AI CREATION · DY-AI-018</small><h3>旧窗与晚风</h3><div class="large-wave">▂▃▆▅▂▄▇▃▁▅▆▂▄▅▇▂</div><button class="round-play">▶</button><p>“我记得书院窗外的风。”</p><footer><span>山海之间</span><button>♡ 33</button></footer></article>
+        <article class="wall-card archive-added" data-type="MEMORY"><span class="archive-stamp">ADDED TO<br>THE ARCHIVE</span><small>MEMORY · 29 JUL 2026</small><h3>一张没有写年份的合影</h3><p>父亲站在最后一排，怀里抱着琵琶。照片背面只写了两个字：东园。</p><footer><span>张先生</span><button>♡ 56</button></footer></article>
+      </div>
+    </section>
+
+    <section class="view my-view" id="memory" data-view="memory">
+      <div class="my-head"><span>PERSONAL ARCHIVE · <b id="personalDate"></b></span><h2>我的东园南音</h2><p>你走过的路径，已经成为这座记忆档案的一部分。</p></div>
+      <div class="memory-graph" id="memoryGraph"><svg id="graphLines" aria-hidden="true"></svg><div class="empty-graph"><i>○</i><b>尚未串联记忆</b><p>回到地图，点击场景中的记忆热点。</p><button data-go="archive">开始探索</button></div></div>
+      <div class="memory-ledger"><div><span>PLACES</span><b id="statPlaces">00</b></div><div><span>MEMORIES</span><b id="statMemories">00</b></div><div><span>SOUNDS</span><b id="statSounds">00</b></div><div><span>CREATIONS</span><b id="statCreations">00</b></div></div>
+      <div class="my-actions"><button id="downloadMemory">DOWNLOAD MEMORY CARD</button><button id="shareMemory">SHARE</button><button onclick="window.print()">PRINT</button></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
