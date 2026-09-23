@@ -6,9 +6,10 @@ const memories={
   hallMemory:{id:'DY-EVT-004',symbol:'◇',type:'EVENT',year:'',title:'南音汇唱活动',image:'assets/archive/nanyin-gathering-2019.png',imageLabel:'南音汇唱现场',desc:'南音社团以汇唱和交流的方式走出日常排练空间。舞台上的演奏连接不同社团，也让地方声音进入更广阔的公共文化现场。',quote:'从日常排练到公共演出，声音连接起更多共同参与的人。',related:['东方红大礼堂','南音乐器','东园南音复兴社']},
   canalStory:{id:'DY-PLACE-004',symbol:'□',type:'PLACE',year:'多代共存',title:'东园水渠',desc:'水渠连接日常路径、童年经验与村落空间。它不直接演奏南音，却是许多居民讲述“从哪里走过”的起点。',quote:'水声和远处的琵琶，有时会在记忆里叠在一起。',related:['童年路径','环境声音','东园书院']},
   ritual:{id:'DY-EVT-011',symbol:'◇',type:'EVENT',year:'仪式时间',title:'郎君祭',desc:'南音社团以仪式追认共同传统。声音、供奉、行礼与人际关系在同一时刻相遇，使文化记忆从知识成为行动。',quote:'礼不是表演，它确认我们从哪里来。',related:['池王爷宫','工乂谱','社团成员']}
+  ,communityToday:{id:'DY-PLACE-012',symbol:'□',type:'PLACE',year:'今日',title:'老空间里的今日生活',image:'assets/archive/community-today.jpg',imageLabel:'东园社区今日景象',desc:'历史建筑并没有离开日常生活。人们仍在这里相聚、交谈，让旧空间继续承载当代社区关系。',quote:'一处空间被持续使用时，记忆就不只停留在过去。',related:['东园书院','社区日常','地方全貌']}
 };
 const scenes={
- academy:{title:'东园书院',id:'DY-PLACE-001',image:'assets/archive/dongyuan-academy.png',sub:'书院空间连接着地方生活、南音排练与社区记忆。',spots:[['pipa',57,32],['score',73,49],['master',45,58],['rehearsal',65,67]]},
+ academy:{title:'东园书院',id:'DY-PLACE-001',image:'assets/archive/dongyuan-academy.png',sub:'书院空间连接着地方生活、南音排练与社区记忆。',spots:[['pipa',57,32],['score',73,49],['master',45,58],['rehearsal',65,67],['communityToday',29,43]]},
  hall:{title:'东方红大礼堂',id:'DY-PLACE-002',image:'assets/archive/dongfanghong-hall.png',sub:'公共文化空间承载演出、相聚与共同观看的记忆。',spots:[['hallMemory',61,39],['master',43,57],['pipa',73,62]]},
  temple:{title:'池王爷宫',id:'DY-PLACE-003',sub:'祭祀让声音成为共同体确认来处的方式。',spots:[['ritual',61,41],['score',46,59],['master',75,63]]},
  canal:{title:'东园水渠',id:'DY-PLACE-004',sub:'水流经过村落，也经过不同人的童年。',spots:[['canalStory',56,46],['rehearsal',74,58],['pipa',42,64]]}
@@ -23,12 +24,15 @@ const translations={
   '← 返回地图':'← BACK TO MAP','旧墙之内，日常排练让古老声腔继续发生。':'Within the old walls, everyday rehearsals keep an ancient sound alive.',
   '散场以后，凳脚声与旧曲仍留在一代人的回忆里。':'After the gathering, moving stools and old melodies remain in a generation’s memory.',
   '祭祀让声音成为共同体确认来处的方式。':'Ritual turns sound into a way for the community to remember where it came from.',
-  '水流经过村落，也经过不同人的童年。':'Water flows through the village—and through many different childhoods.',
+  '水流经过村落，也经过不同人的童年。':'Water flows through the village and through many different childhoods.',
   '听见这段记忆':'LISTEN TO THIS MEMORY','＋ 串入我的记忆线':'＋ ADD TO MY MEMORY THREAD','展开 ↗':'EXPAND ↗','从一个记忆开始':'BEGIN WITH ONE MEMORY',
   '把一段记忆':'TURN A MEMORY','变成':'INTO','南音':'NANYIN','写下一句话。系统会从记忆的地点、情绪与时间中，选择一段南音式旋律回应你。':'Write one sentence. The system responds with a Nanyin-inspired melody shaped by place, emotion and time.',
   '你的记忆 / YOUR MEMORY':'YOUR MEMORY','小时候，我常跟奶奶经过东园的水渠……':'When I was young, I often walked past Dongyuan Canal with my grandmother…','使用一段示例':'USE AN EXAMPLE',
   '生成一段记忆':'GENERATE A MEMORY','水渠旁的旧日回声':'OLD ECHOES BY THE CANAL','水 · 怀旧 · 缓板':'WATER · NOSTALGIA · ADAGIO',
-  '一面仍在生长的':'A LIVING','记忆墙':'MEMORY WALL','个人讲述被听见，也可能成为下一条集体档案。':'A personal story can be heard—and become the next collective record.',
+  '一面仍在生长的':'A LIVING','记忆墙':'MEMORY WALL','个人讲述被听见，也可能成为下一条集体档案。':'A personal story can be heard and become the next collective record.',
+  '东园当代影像档案':'CONTEMPORARY DONGYUAN IMAGE ARCHIVE','地方全貌':'PLACE IN FULL','村落、旧厝与新的城市边界':'THE VILLAGE, HISTORIC HOMES AND A CHANGING URBAN EDGE','当代影像':'CONTEMPORARY IMAGE','公共建筑':'PUBLIC ARCHITECTURE','建筑记忆':'ARCHITECTURAL MEMORY','张世清宅':'ZHANG SHIQING HOUSE','不可移动文物':'IMMOVABLE CULTURAL HERITAGE','社区日常':'COMMUNITY LIFE','老空间里的今日生活':'DAILY LIFE IN A HISTORIC SPACE','东园社区今日景象':'DONGYUAN COMMUNITY TODAY',
+  '东园社区全景航拍':'AERIAL VIEW OF DONGYUAN COMMUNITY','东方红大礼堂立面细节':'FACADE DETAIL OF DONGFANGHONG ASSEMBLY HALL','张世清宅红砖建筑细节':'RED-BRICK DETAIL OF ZHANG SHIQING HOUSE','今日东园社区室内生活景象':'EVERYDAY LIFE INSIDE DONGYUAN COMMUNITY TODAY',
+  '历史建筑并没有离开日常生活。人们仍在这里相聚、交谈，让旧空间继续承载当代社区关系。':'Historic buildings remain part of everyday life. People still gather and talk here, allowing old spaces to hold present-day community relationships.','一处空间被持续使用时，记忆就不只停留在过去。':'When a place remains in use, memory does not stay only in the past.',
   '东园旧影 · 1987':'DONGYUAN · 1987','礼堂散场以后':'AFTER THE HALL EMPTIED','小时候只记得大人们搬着长凳。很多年以后再听到拍板，才知道那晚唱的是南音。':'As a child, I only remembered adults moving long benches. Years later, hearing the clappers again, I learned that the music that night was Nanyin.',
   '林阿姨 · 东园居民':'AUNT LIN · RESIDENT','声一起，村子就不只是一个地方。它会变成许多人共同记得的样子。':'When the music begins, the village is no longer only a place. It becomes what many people remember together.',
   '复兴社成员':'REVIVAL SOCIETY MEMBER','东园水渠 · 今日':'DONGYUAN CANAL · TODAY','水渠边的路':'THE PATH BY THE CANAL','奶奶总在这里放慢脚步。':'Grandmother always slowed down here.','鹭岛小陈':'XIAO CHEN · XIAMEN',
@@ -61,6 +65,8 @@ function applyLanguage(){
   document.title=currentLang==='en'?'Hear Dongyuan | Digital Nanyin Memory':'听见东园｜东园南音数字记忆';
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>['SCRIPT','STYLE'].includes(n.parentElement?.tagName)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
   while(walker.nextNode()){const n=walker.currentNode,raw=n.textContent,trim=raw.trim();if(!trim)continue;if(n._i18nZh===undefined)n._i18nZh=trim;const value=currentLang==='en'?(translations[n._i18nZh]||n._i18nZh):n._i18nZh;n.textContent=raw.replace(trim,value)}
+  $$('[alt]').forEach(el=>{if(!el.dataset.zhAlt)el.dataset.zhAlt=el.getAttribute('alt');el.setAttribute('alt',currentLang==='en'?(translations[el.dataset.zhAlt]||el.dataset.zhAlt):el.dataset.zhAlt)});
+  $$('.visual-archive[aria-label]').forEach(el=>{if(!el.dataset.zhAria)el.dataset.zhAria=el.getAttribute('aria-label');el.setAttribute('aria-label',currentLang==='en'?(translations[el.dataset.zhAria]||el.dataset.zhAria):el.dataset.zhAria)});
   $('#memoryInput').placeholder=currentLang==='en'?translations['小时候，我常跟奶奶经过东园的水渠……']:'小时候，我常跟奶奶经过东园的水渠……';
   const spans=$$('#languageToggle span');spans[0].classList.toggle('active',currentLang==='zh');spans[1].classList.toggle('active',currentLang==='en');
   $('#languageToggle').setAttribute('aria-label',currentLang==='zh'?'Switch to English':'切换到中文');
@@ -88,6 +94,6 @@ $('#saveGenerated').onclick=()=>{if(!thread.includes('creation'))thread.push('cr
 $$('#filters button').forEach(b=>b.onclick=()=>{$$('#filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');$$('.wall-card').forEach(c=>c.style.display=b.textContent==='ALL'||c.dataset.type===b.textContent?'block':'none')});
 $$('.wall-card footer button').forEach(b=>b.onclick=()=>{const n=parseInt(b.textContent.match(/\d+/)?.[0]||0)+1;b.textContent='♥ '+n;b.style.color='#9b4438'});
 function renderGraph(){const g=$('#memoryGraph');const nodes=thread.filter(id=>id==='creation'||memories[id]);g.querySelectorAll('.graph-node').forEach(n=>n.remove());$('.empty-graph').style.display=nodes.length?'none':'grid';const svg=$('#graphLines');svg.innerHTML='';const coords=[[8,16],[31,55],[55,13],[76,57],[88,20],[47,68],[16,68]];nodes.slice(0,7).forEach((id,i)=>{const m=id==='creation'?{type:'MY MEMORY',title:'我的南音创作'}:memories[id],d=document.createElement('div');d.className='graph-node';d.style.left=coords[i][0]+'%';d.style.top=coords[i][1]+'%';d.innerHTML=`<small>${m.type}</small><b>${m.title}</b>`;g.appendChild(d);if(i){const line=document.createElementNS('http://www.w3.org/2000/svg','line');line.setAttribute('x1',coords[i-1][0]+5+'%');line.setAttribute('y1',coords[i-1][1]+12+'%');line.setAttribute('x2',coords[i][0]+5+'%');line.setAttribute('y2',coords[i][1]+12+'%');svg.appendChild(line)}});$('#statMemories').textContent=String(nodes.filter(x=>x!=='creation').length).padStart(2,'0');$('#statPlaces').textContent=String(new Set(nodes.filter(x=>x!=='creation').map(x=>memories[x].type==='PLACE'?x:'academy')).size).padStart(2,'0');$('#statSounds').textContent=String(nodes.length?Math.min(3,nodes.length):0).padStart(2,'0');$('#statCreations').textContent=String(nodes.includes('creation')?1:0).padStart(2,'0');applyLanguage()}
-$('#downloadMemory').onclick=()=>{const text=['MY DONGYUAN NANYIN / 我的东园南音','',...thread.map(id=>id==='creation'?'MY MEMORY — 我的南音创作':`${memories[id].type} — ${memories[id].title}`)].join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain'}));a.download='我的东园南音.txt';a.click();URL.revokeObjectURL(a.href);toast('个人记忆卡已下载')};$('#shareMemory').onclick=()=>{navigator.clipboard?.writeText(location.href);toast('分享链接已复制')};
+$('#downloadMemory').onclick=()=>{const text=['MY DONGYUAN NANYIN / 我的东园南音','',...thread.map(id=>id==='creation'?'MY MEMORY - 我的南音创作':`${memories[id].type} - ${memories[id].title}`)].join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain'}));a.download='我的东园南音.txt';a.click();URL.revokeObjectURL(a.href);toast('个人记忆卡已下载')};$('#shareMemory').onclick=()=>{navigator.clipboard?.writeText(location.href);toast('分享链接已复制')};
 function toast(msg){const t=$('#toast');t.textContent=tr(msg);t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
 $('#personalDate').textContent=new Intl.DateTimeFormat('zh-CN').format(new Date());applyLanguage();updateThread();
